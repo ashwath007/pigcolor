@@ -1,23 +1,25 @@
 {
-  "name": "pigcolor",
-  "version": "1.0.0",
-  "description": "pigcolor - Node.js module for terminal coloring.",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ashwath007/pigcolor.git"
-  },
-  "keywords": [
-    "color",
-    "pigcolor"
-  ],
-  "author": "sri vigneshwar dj",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ashwath007/pigcolor/issues"
-  },
-  "homepage": "https://github.com/ashwath007/pigcolor#readme"
+    "name": "pigcolor",
+    "version": "1.0.0",
+    "description": "pigcolor - Node.js module for terminal coloring.",
+    "main": "src/index.js",
+    "bin": "src/index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ashwath007/pigcolor.git"
+    },
+    "keywords": [
+        "color",
+        "pigcolor",
+        "color cli"
+    ],
+    "author": "Sri Vigneshwar DJ",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ashwath007/pigcolor/issues"
+    },
+    "homepage": "https://github.com/ashwath007/pigcolor#readme"
 }
