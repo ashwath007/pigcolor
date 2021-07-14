@@ -1,6 +1,6 @@
 {
     "name": "pigcolor",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "pigcolor - Node.js module for terminal coloring.",
     "main": "src/index.js",
     "bin": "src/index.js",
@@ -21,5 +21,8 @@
     "bugs": {
         "url": "https://github.com/ashwath007/pigcolor/issues"
     },
-    "homepage": "https://github.com/ashwath007/pigcolor#readme"
+    "homepage": "https://github.com/ashwath007/pigcolor#readme",
+    "dependencies": {
+        "express": "^4.17.1"
+    }
 }
