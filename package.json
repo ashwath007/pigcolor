@@ -23,6 +23,8 @@
     },
     "homepage": "https://github.com/ashwath007/pigcolor#readme",
     "dependencies": {
-        "express": "^4.17.1"
+        "cli-box": "^6.0.10",
+        "express": "^4.17.1",
+        "node-emoji": "^1.10.0"
     }
 }
