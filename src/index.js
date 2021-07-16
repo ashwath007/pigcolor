@@ -1,6 +1,8 @@
 #!/usr/bin/env node
 var emoji = require('node-emoji');
 const Box = require('cli-box');
+var figlet = require('figlet');
+var inquirer = require('inquirer');
 // Server
 module.exports.server = function (port = 0) {
     if(port === 0){
@@ -21,8 +23,6 @@ module.exports.db = function (port = 0) {
     else console.log('\u001b[35mDatabase Connected \u001b[36m@%d',port,emoji.get('facepunch'));
 }
 
-
-
 module.exports.lbox = (txt) => {
     // console.log(emoji.get('pig'),'\u001b[38;5;174m',txt,emoji.get('pig'));
     var b3 = Box("100x4", `\u001b[38;5;174m\n${txt}`);
@@ -36,6 +36,61 @@ module.exports.box = (txt) => {
 }
 
 module.exports.middleware = function () {
+
+
+}
+
+const run = async () => {
+    const credentials = await inquirer.askGithubCredentials();
+    console.log(credentials);
+  };
+
+module.exports = {
+    askGithubCredentials: () => {
+      const questions = [
+        {
+          name: 'username',
+          type: 'input',
+          message: 'Enter your GitHub username or e-mail address:',
+          validate: function( value ) {
+            if (value.length) {
+              return true;
+            } else {
+              return 'Please enter your username or e-mail address.';
+            }
+          }
+        },
+        {
+          name: 'password',
+          type: 'password',
+          message: 'Enter your password:',
+          validate: function(value) {
+            if (value.length) {
+              return true;
+            } else {
+              return 'Please enter your password.';
+            }
+          }
+        }
+      ];
+      return inquirer.prompt(questions);
+    },
+  };
+
+
+
+
+module.exports.dev = () => {
+    figlet('Piggy <dev>', function(err, data) {
+        if (err) {
+            console.log('Something went wrong...');
+            console.dir(err);
+            return;
+        }
+        console.log(data)
+    });
+
+    // run();
 
 }
 
