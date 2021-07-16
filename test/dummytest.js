@@ -1,4 +1,6 @@
-const { Color } = require('pigcolor');
+const pig = require('pigcolor');
 
 
-Color("Vicky");
+pig.server();
+
+pig.loading();
