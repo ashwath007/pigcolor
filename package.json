@@ -23,8 +23,20 @@
     },
     "homepage": "https://github.com/ashwath007/pigcolor#readme",
     "dependencies": {
+        "@octokit/auth-basic": "^1.4.8",
+        "@octokit/rest": "^18.6.7",
+        "chalk": "^4.1.1",
+        "clear": "^0.1.0",
         "cli-box": "^6.0.10",
+        "clui": "^0.3.6",
+        "configstore": "^6.0.0",
         "express": "^4.17.1",
-        "node-emoji": "^1.10.0"
+        "figlet": "^1.5.0",
+        "inquirer": "^8.1.2",
+        "lodash": "^4.17.21",
+        "minimist": "^1.2.5",
+        "node-emoji": "^1.10.0",
+        "simple-git": "^2.41.1",
+        "touch": "^3.1.0"
     }
 }
