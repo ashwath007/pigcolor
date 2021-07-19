@@ -3,8 +3,18 @@ var emoji = require('node-emoji');
 const Box = require('cli-box');
 var figlet = require('figlet');
 var inquirer = require('inquirer');
+
+
+// module.exports = {
+    
+// }
+
+
+
+
+
 // Server
-module.exports.server = function (port = 0) {
+module.exports.server =function(port = 0) {
     if(port === 0){
         console.log("-----------------------------------------------------------");
         console.log('\x1b[36m\t\t\tServer started \x1b[0m',emoji.random().emoji);
@@ -18,7 +28,9 @@ module.exports.server = function (port = 0) {
     }
     };
 
-module.exports.db = function (port = 0) {
+
+// Database
+module.exports.db =  (port = 0) => {
     if(port === 0) console.log('\u001b[35mDatabase Connected',emoji.get('facepunch'));
     else console.log('\u001b[35mDatabase Connected \u001b[36m@%d',port,emoji.get('facepunch'));
 }
@@ -35,53 +47,15 @@ module.exports.box = (txt) => {
     console.log(b3);
 }
 
-module.exports.middleware = function () {
+module.exports.middleware = () => {
 
 
 }
 
-const run = async () => {
-    const credentials = await inquirer.askGithubCredentials();
-    console.log(credentials);
-  };
-
-module.exports = {
-    askGithubCredentials: () => {
-      const questions = [
-        {
-          name: 'username',
-          type: 'input',
-          message: 'Enter your GitHub username or e-mail address:',
-          validate: function( value ) {
-            if (value.length) {
-              return true;
-            } else {
-              return 'Please enter your username or e-mail address.';
-            }
-          }
-        },
-        {
-          name: 'password',
-          type: 'password',
-          message: 'Enter your password:',
-          validate: function(value) {
-            if (value.length) {
-              return true;
-            } else {
-              return 'Please enter your password.';
-            }
-          }
-        }
-      ];
-      return inquirer.prompt(questions);
-    },
-  };
 
 
-
-
-module.exports.dev = () => {
-    figlet('Piggy <dev>', function(err, data) {
+module.exports.help = () => {
+    figlet('Piggy help', function(err, data) {
         if (err) {
             console.log('Something went wrong...');
             console.dir(err);

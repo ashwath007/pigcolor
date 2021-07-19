@@ -9,6 +9,6 @@
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "pigcolor": "^1.0.2"
+    "pigcolor": "^1.0.3"
   }
 }
